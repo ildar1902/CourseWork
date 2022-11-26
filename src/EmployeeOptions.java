@@ -4,4 +4,12 @@ public class EmployeeOptions {
             System.out.println(employee);
         }
     }
+
+    public static double calculateCostAmount(Employee[] sumSalary) {
+        double sum = 0;
+        for (Employee employee : sumSalary) {
+            sum += employee.getSalary();
+        }
+        return sum;
+    }
 }
