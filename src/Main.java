@@ -26,6 +26,9 @@ public class Main {
         System.out.println("Средний размер ЗП = " + averageSalary + " рублей");
         System.out.println();
         EmployeeOptions.printFullNamesWorkers(bookWorkers);//метод, который выводит в консоль ФИО всех сотрудников
+        System.out.println();
+        System.out.println("        Ну вот и всё. Базовая сложность выполнена");
+
 
     }
 }
