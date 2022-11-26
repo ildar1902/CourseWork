@@ -22,6 +22,9 @@ public class Main {
         System.out.println();
         EmployeeOptions.findWorkerMaxSalary(bookWorkers); //вызов метода, который находит сотрудника с максимальной ЗП
         System.out.println();
+        double averageSalary = EmployeeOptions.calculateAverageSalary(bookWorkers);//метод, который считает среднюю ЗП
+        System.out.println("Средний размер ЗП = " + averageSalary + " рублей");
+
 
     }
 }

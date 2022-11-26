@@ -36,4 +36,8 @@ public class EmployeeOptions {
         }
         System.out.println("Максимальный размер ЗП " + max + " рублей получает " + nameWorkerMax);
     }
+
+    public static double calculateAverageSalary(Employee[] averageSalary) {
+        return calculateCostAmount(averageSalary) / averageSalary.length;
+    }
 }
