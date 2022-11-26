@@ -40,4 +40,10 @@ public class EmployeeOptions {
     public static double calculateAverageSalary(Employee[] averageSalary) {
         return calculateCostAmount(averageSalary) / averageSalary.length;
     }
+
+    public static void printFullNamesWorkers(Employee[] fullNamesWorkers) {
+        for (Employee employee : fullNamesWorkers) {
+            System.out.println(employee.getFullName());
+        }
+    }
 }

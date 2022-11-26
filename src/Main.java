@@ -24,7 +24,8 @@ public class Main {
         System.out.println();
         double averageSalary = EmployeeOptions.calculateAverageSalary(bookWorkers);//метод, который считает среднюю ЗП
         System.out.println("Средний размер ЗП = " + averageSalary + " рублей");
-
+        System.out.println();
+        EmployeeOptions.printFullNamesWorkers(bookWorkers);//метод, который выводит в консоль ФИО всех сотрудников
 
     }
 }
