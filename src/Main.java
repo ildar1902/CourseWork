@@ -19,7 +19,9 @@ public class Main {
         System.out.println("Сумма затрат на ЗП в месяц = " + costAmount + " рублей");
         System.out.println();
         EmployeeOptions.findWorkerMinSalary(bookWorkers); //вызов метода, который находит сотрудника с минимальной ЗП
-
+        System.out.println();
+        EmployeeOptions.findWorkerMaxSalary(bookWorkers); //вызов метода, который находит сотрудника с максимальной ЗП
+        System.out.println();
 
     }
 }

@@ -15,13 +15,25 @@ public class EmployeeOptions {
 
     public static void findWorkerMinSalary(Employee[] minSalary) {
         double min = Integer.MAX_VALUE;
-        String nameWorker = null;
+        String nameWorkerMin = null;
         for (Employee employee : minSalary) {
             if (employee.getSalary() < min) {
                 min = employee.getSalary();
-                nameWorker = employee.getFullName();
+                nameWorkerMin = employee.getFullName();
             }
         }
-        System.out.println("Минимальный размер ЗП " + min + " рублей получает " + nameWorker);
+        System.out.println("Минимальный размер ЗП " + min + " рублей получает " + nameWorkerMin);
+    }
+    public static void findWorkerMaxSalary(Employee[] maxSalary) {
+        double max = Integer.MIN_VALUE;
+        String nameWorkerMax = null;
+        for (Employee employee : maxSalary) {
+            if (employee.getSalary() > max) {
+                max = employee.getSalary();
+                nameWorkerMax = employee.getFullName();
+
+            }
+        }
+        System.out.println("Максимальный размер ЗП " + max + " рублей получает " + nameWorkerMax);
     }
 }
