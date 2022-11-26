@@ -13,7 +13,10 @@ public class Main {
         bookWorkers[7] = new Employee("Кулешов", "Роман", "Эминович", 4, 55_490);
         bookWorkers[8] = new Employee("Королёв", "Илья", "Львович", 3, 53_090);
         bookWorkers[9] = new Employee("Морозова", "Александра", "Марковна", 5, 65_290);
-       
+        EmployeeOptions.printAllEmployees(bookWorkers);// вызов метода, который выводит в консоль список
+                                                        // всех сотрудников со всеми имеющимися по ним данными
+
+
 
 
 

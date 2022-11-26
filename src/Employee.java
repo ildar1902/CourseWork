@@ -15,6 +15,7 @@ public class Employee {
         this.salary = salary;
         id = idCounter++;
     }
+
     public String getSurname() {
         return surname;
     }
@@ -28,7 +29,7 @@ public class Employee {
     }
 
     public String getFullName() {
-        return getName() + " " + getSurname() + " " + getPatronymic();
+        return name + " " + surname + " " + patronymic;
     }
 
     public int getDepartment() {
@@ -49,5 +50,11 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Фамилия: " + getSurname() + ", Имя: " + getName() + ", Отчество: " + getPatronymic() +
+                ", отдел № " + getDepartment() + ", зп = " + getSalary() + ", id = " + getId();
     }
 }
