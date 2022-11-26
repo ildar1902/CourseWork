@@ -15,4 +15,39 @@ public class Employee {
         this.salary = salary;
         id = idCounter++;
     }
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
+    }
+
+    public String getFullName() {
+        return getName() + " " + getSurname() + " " + getPatronymic();
+    }
+
+    public int getDepartment() {
+        return department;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setDepartment(int department) {
+        this.department = department;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
 }
