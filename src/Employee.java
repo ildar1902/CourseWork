@@ -48,13 +48,13 @@ public class Employee {
         this.department = department;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
     @Override
     public String toString() {
-        return "Фамилия: " + getSurname() + ", Имя: " + getName() + ", Отчество: " + getPatronymic() +
-                ", отдел № " + getDepartment() + ", зп = " + getSalary() + ", id = " + getId();
+        return "id = " + getId() + ", ФИО: " + getSurname() + " " + getName() + " " + getPatronymic() +
+                ", отдел № " + getDepartment() + ", ЗП = " + getSalary();
     }
 }
