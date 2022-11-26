@@ -12,4 +12,16 @@ public class EmployeeOptions {
         }
         return sum;
     }
+
+    public static void findWorkerMinSalary(Employee[] minSalary) {
+        double min = Integer.MAX_VALUE;
+        String nameWorker = null;
+        for (Employee employee : minSalary) {
+            if (employee.getSalary() < min) {
+                min = employee.getSalary();
+                nameWorker = employee.getFullName();
+            }
+        }
+        System.out.println("Минимальный размер ЗП " + min + " рублей получает " + nameWorker);
+    }
 }

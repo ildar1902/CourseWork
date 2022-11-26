@@ -29,7 +29,7 @@ public class Employee {
     }
 
     public String getFullName() {
-        return name + " " + surname + " " + patronymic;
+        return surname + " " + name + " " + patronymic;
     }
 
     public int getDepartment() {

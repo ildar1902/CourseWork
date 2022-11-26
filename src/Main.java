@@ -17,6 +17,8 @@ public class Main {
         System.out.println();                          // всех сотрудников со всеми имеющимися по ним данными
         double costAmount = EmployeeOptions.calculateCostAmount(bookWorkers); //метод, считающий сумму затрат на ЗП
         System.out.println("Сумма затрат на ЗП в месяц = " + costAmount + " рублей");
+        System.out.println();
+        EmployeeOptions.findWorkerMinSalary(bookWorkers); //вызов метода, который находит сотрудника с минимальной ЗП
 
 
     }
