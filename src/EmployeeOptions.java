@@ -4,6 +4,7 @@ public class EmployeeOptions {
             System.out.println(employee);
         }
     }
+
     public static double calculateCostAmount() {
         double sum = 0;
         for (Employee employee : Main.BOOK_WORKERS) {
@@ -11,6 +12,7 @@ public class EmployeeOptions {
         }
         return sum;
     }
+
     public static void findWorkerWithMinSalary() {
         double min = Integer.MAX_VALUE;
         String nameWorkerMin = null;
@@ -20,12 +22,13 @@ public class EmployeeOptions {
                 nameWorkerMin = employee.getFullName();
             }
         }
-        System.out.println("Сотрудник с минимальной зарплатой - " + nameWorkerMin + ". Она зарабатывает "+ min + " рублей");
+        System.out.println("Сотрудник с минимальной зарплатой - " + nameWorkerMin + ". Она зарабатывает " + min + " рублей");
     }
+
     public static Employee findWorkerWithMaxSalary() { // оставил два разных варианта нахождения и вывода сотрудника
-                                                       // с определенным размером ЗП (мин и макс). дайте, пожалуйста,
-                                                      // обратную связь, какой вариант правильнее.
-                                                    // если допустимы оба варианта, то какой предпочтительнее. спасибо
+        // с определенным размером ЗП (мин и макс). дайте, пожалуйста,
+        // обратную связь, какой вариант правильнее.
+        // если допустимы оба варианта, то какой предпочтительнее. спасибо
         double max = Integer.MIN_VALUE;
         Employee nameWorkerWithMaxSalary = null;
         for (int i = 0; i < Main.BOOK_WORKERS.length; i++) {
@@ -43,6 +46,14 @@ public class EmployeeOptions {
     public static void printFullNamesWorkers() {
         for (Employee employee : Main.BOOK_WORKERS) {
             System.out.println(employee.getFullName());
+        }
+    }
+
+    public static void indexSalary(double percent) {
+
+        for (Employee employee : Main.BOOK_WORKERS) {
+            employee.setSalary(employee.getSalary() * percent);
+            System.out.printf("После индексации зарплаты " + employee.getFullName() + " получает %.0f " + " рублей%n", employee.getSalary());
         }
     }
 }

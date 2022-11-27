@@ -32,5 +32,11 @@ public class Main {
         EmployeeOptions.printFullNamesWorkers();//метод, который выводит в консоль ФИО всех сотрудников
         System.out.println();
         System.out.println("        Ну вот и всё. Базовая сложность выполнена");
+
+//        Повышенная сложность
+        System.out.println();
+        System.out.println("    Задания повышенной сложности");
+        double percentIncreasingSalary = 1.06;
+        EmployeeOptions.indexSalary(percentIncreasingSalary);
     }
 }
