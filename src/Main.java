@@ -41,7 +41,8 @@ public class Main {
         System.out.println();
         int numberDepartment = 4; //задаваемый номер отдела
         EmployeeOptions.findWorkerWithMinSalaryInDepartment(numberDepartment); //вызов метода, который находит сотрудника по отделу с минимальной зп
-
+        System.out.println();
+        EmployeeOptions.findWorkerWithMaxSalaryInDepartment(numberDepartment);//вызов метода, который находит сотрудника по отделу с максимальной зп
 
     }
 }

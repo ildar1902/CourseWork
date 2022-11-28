@@ -83,4 +83,17 @@ public class EmployeeOptions {
         System.out.printf(minSalaryEmployee + " из " + number + "-го отдела зарабатывает %.0f "
                 + " рублей в месяц. Это минимальная ЗП в этом отделе%n", min);
     }
+
+    public static void findWorkerWithMaxSalaryInDepartment(int number) {
+        double max = Integer.MIN_VALUE;
+        String maxSalaryEmployee = null;
+        for (Employee employee : Main.BOOK_WORKERS) {
+            if (employee != null && employee.getDepartment() == number && employee.getSalary() > max) {
+                max = employee.getSalary();
+                maxSalaryEmployee = employee.getFullName();
+            }
+        }
+        System.out.printf(maxSalaryEmployee + " из " + number + "-го отдела зарабатывает %.0f "
+                + " рублей в месяц. Это максимальная ЗП в этом отделе%n", max);
+    }
 }
