@@ -96,4 +96,14 @@ public class EmployeeOptions {
         System.out.printf(maxSalaryEmployee + " из " + number + "-го отдела зарабатывает %.0f "
                 + " рублей в месяц. Это максимальная ЗП в этом отделе%n", max);
     }
+    public static double calculateCostAmountInDepartment(int number) {
+        double sum = 0;
+        for (Employee employee : Main.BOOK_WORKERS) {
+            if (employee != null && employee.getDepartment() == number) {
+                sum += employee.getSalary();
+            }
+        }
+        return sum;
+    }
+
 }

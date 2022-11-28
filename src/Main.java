@@ -43,6 +43,9 @@ public class Main {
         EmployeeOptions.findWorkerWithMinSalaryInDepartment(numberDepartment); //вызов метода, который находит сотрудника по отделу с минимальной зп
         System.out.println();
         EmployeeOptions.findWorkerWithMaxSalaryInDepartment(numberDepartment);//вызов метода, который находит сотрудника по отделу с максимальной зп
+        System.out.println();
+        double costAmountInDepartment = EmployeeOptions.calculateCostAmountInDepartment(numberDepartment);// метод, который считает сумму ЗП в отделе
+        System.out.println("Сумма затрат на ЗП в месяц в " + numberDepartment + "-м отделе равна " + costAmountInDepartment + " рублей");
 
     }
 }
