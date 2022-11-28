@@ -31,15 +31,15 @@ public class Main {
         System.out.println();
         EmployeeOptions.printFullNamesWorkers();//метод, который выводит в консоль ФИО всех сотрудников
         System.out.println();
-        System.out.println("        Ну вот и всё. Базовая сложность выполнена");
+        System.out.println("       Задания Базовой сложность выполнены");
 
 //        Повышенная сложность
         System.out.println();
         System.out.println("    Задания повышенной сложности");
-        double percentIncreasingSalary = 6; // задаваемая величина индексации (%)
+        double percentIncreasingSalary = 6; // задаваемая величина индексации (%). Значение можно брать отсюда, либо прописывать любое другое при вызове метода
         EmployeeOptions.indexSalary(percentIncreasingSalary); //вызов метода, который индексирует ЗП
         System.out.println();
-        int numberDepartment = 4; //задаваемый номер отдела
+        int numberDepartment = 4; //задаваемый номер отдела. Значение можно брать отсюда, либо прописывать любое другое при вызове метода
         EmployeeOptions.findWorkerWithMinSalaryInDepartment(numberDepartment); //вызов метода, который находит сотрудника по отделу с минимальной зп
         System.out.println();
         EmployeeOptions.findWorkerWithMaxSalaryInDepartment(numberDepartment);//вызов метода, который находит сотрудника по отделу с максимальной зп
@@ -54,5 +54,14 @@ public class Main {
         System.out.println();
         System.out.println("    Список всех сотрудников " + numberDepartment + "-го отдела: ");
         EmployeeOptions.printEmployeesDepartment(numberDepartment); // печать всех сотрудников отела
+        System.out.println();
+        double otherNumber = 55_000;
+            System.out.println("  Список сотрудников, чья ЗП меньше " + otherNumber + " рублей:");
+        EmployeeOptions.findWorkerSalaryLessThanOther(otherNumber); //список сотрудников, зп которых меньше заданного числа
+        System.out.println();
+        System.out.println("  Список сотрудников, чья ЗП больше " + otherNumber + " рублей:");
+        EmployeeOptions.findWorkerSalaryMoreThanOther(otherNumber);//список сотрудников, зп которых больше заданного числа
+        System.out.println();
+        System.out.println("    Задания повышенной сложности выполнены");
     }
 }

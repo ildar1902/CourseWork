@@ -66,7 +66,7 @@ public class EmployeeOptions {
         for (Employee employee : Main.BOOK_WORKERS) {
             if (employee != null) {
                 employee.setSalary(employee.getSalary() + employee.getSalary() / 100 * percent);
-                System.out.printf("После индексации зарплаты " + employee.getFullName() + " получает %.0f " + " рублей%n", employee.getSalary());
+                System.out.println("После индексации зарплаты " + employee.getFullName() + " получает " + Math.ceil(employee.getSalary()) + " рублей");
             }
         }
     }
@@ -130,6 +130,22 @@ public class EmployeeOptions {
     public static void printEmployeesDepartment(int number) {
         for (Employee employee : Main.BOOK_WORKERS) {
             if (employee != null && employee.getDepartment() == number) {
+                System.out.println(employee.getDepartmentInfo());
+            }
+        }
+    }
+    public static void findWorkerSalaryLessThanOther(double numberOther) {
+        for (Employee employee : Main.BOOK_WORKERS) {
+            if (employee != null  && employee.getSalary() < numberOther){
+                employee.getDepartmentInfo();
+                System.out.println(employee.getDepartmentInfo());
+            }
+        }
+    }
+    public static void findWorkerSalaryMoreThanOther(double numberOther) {
+        for (Employee employee : Main.BOOK_WORKERS) {
+            if (employee != null  && employee.getSalary() >= numberOther){
+                employee.getDepartmentInfo();
                 System.out.println(employee.getDepartmentInfo());
             }
         }
