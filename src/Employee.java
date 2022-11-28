@@ -36,6 +36,10 @@ public class Employee {
         return department;
     }
 
+    public String getDepartmentInfo() {
+        return "ID: " + getId() + ", ФИО: " + getFullName() + ", ЗП = " + Math.ceil(getSalary());
+    }
+
     public double getSalary() {
         return salary;
     }
@@ -54,7 +58,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "ID = " + getId() + ", отдел № "  + ", ФИО: " + getSurname() +
-                 " " + getName() + " " + getPatronymic() + getDepartment() + ", ЗП = " + getSalary();
+        return "ID = " + getId() + ", отдел № " + getDepartment() +  ", ФИО: " + getSurname() +
+                 " " + getName() + " " + getPatronymic()  + ", ЗП = " + getSalary();
     }
 }

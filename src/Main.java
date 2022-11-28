@@ -52,5 +52,7 @@ public class Main {
         System.out.println();
         EmployeeOptions.indexSalaryInDepartment(numberDepartment, percentIncreasingSalary); //вызов метода, который индексирует зп по отделу
         System.out.println();
+        System.out.println("    Список всех сотрудников " + numberDepartment + "-го отдела: ");
+        EmployeeOptions.printEmployeesDepartment(numberDepartment); // печать всех сотрудников отела
     }
 }

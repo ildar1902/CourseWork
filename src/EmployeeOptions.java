@@ -127,4 +127,11 @@ public class EmployeeOptions {
             }
         }
     }
+    public static void printEmployeesDepartment(int number) {
+        for (Employee employee : Main.BOOK_WORKERS) {
+            if (employee != null && employee.getDepartment() == number) {
+                System.out.println(employee.getDepartmentInfo());
+            }
+        }
+    }
 }
