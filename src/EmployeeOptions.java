@@ -105,5 +105,13 @@ public class EmployeeOptions {
         }
         return sum;
     }
-
+    public static double calculateAverageSalaryInDepartment(int number) {
+        int count = 0;
+        for (Employee employee : Main.BOOK_WORKERS) {
+            if (employee != null && employee.department == number ) {
+                count++;
+            }
+        }
+        return calculateCostAmountInDepartment(number) / count;
+    }
 }

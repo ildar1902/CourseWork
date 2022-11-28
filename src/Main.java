@@ -46,6 +46,10 @@ public class Main {
         System.out.println();
         double costAmountInDepartment = EmployeeOptions.calculateCostAmountInDepartment(numberDepartment);// метод, который считает сумму ЗП в отделе
         System.out.println("Сумма затрат на ЗП в месяц в " + numberDepartment + "-м отделе равна " + costAmountInDepartment + " рублей");
+        System.out.println();
+        double averageSalaryInDepartment = EmployeeOptions.calculateAverageSalaryInDepartment(numberDepartment);//вызов метода, который находит среднюю зп в отделе
+        System.out.println("Средняя ЗП в " + numberDepartment + "-м отеле равна " + averageSalaryInDepartment + " рублей");
+        System.out.println();
 
     }
 }
