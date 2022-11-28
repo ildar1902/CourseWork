@@ -1,14 +1,18 @@
 public class EmployeeOptions {
     public static void printAllEmployees() {
         for (Employee employee : Main.BOOK_WORKERS) {
-            System.out.println(employee);
+            if (employee != null) {
+                System.out.println(employee);
+            }
         }
     }
 
     public static double calculateCostAmount() {
         double sum = 0;
         for (Employee employee : Main.BOOK_WORKERS) {
-            sum += employee.getSalary();
+            if (employee != null) {
+                sum += employee.getSalary();
+            }
         }
         return sum;
     }
@@ -17,7 +21,7 @@ public class EmployeeOptions {
         double min = Integer.MAX_VALUE;
         String nameWorkerMin = null;
         for (Employee employee : Main.BOOK_WORKERS) {
-            if (employee.getSalary() < min) {
+            if (employee != null && employee.getSalary() < min) {
                 min = employee.getSalary();
                 nameWorkerMin = employee.getFullName();
             }
@@ -32,7 +36,7 @@ public class EmployeeOptions {
         double max = Integer.MIN_VALUE;
         Employee nameWorkerWithMaxSalary = null;
         for (int i = 0; i < Main.BOOK_WORKERS.length; i++) {
-            if (Main.BOOK_WORKERS[i].getSalary() > max) {
+            if (Main.BOOK_WORKERS[i] != null && Main.BOOK_WORKERS[i].getSalary() > max) {
                 nameWorkerWithMaxSalary = Main.BOOK_WORKERS[i];
             }
         }
@@ -40,20 +44,43 @@ public class EmployeeOptions {
     }
 
     public static double calculateAverageSalary() {
-        return calculateCostAmount() / Main.BOOK_WORKERS.length;
+        int count = 0;
+        for (Employee employee : Main.BOOK_WORKERS) {
+            if (employee != null) {
+                count++;
+            }
+        }
+        return calculateCostAmount() / count;
     }
 
     public static void printFullNamesWorkers() {
         for (Employee employee : Main.BOOK_WORKERS) {
-            System.out.println(employee.getFullName());
+            if (employee != null) {
+                System.out.println(employee.getFullName());
+            }
         }
     }
 
     public static void indexSalary(double percent) {
 
         for (Employee employee : Main.BOOK_WORKERS) {
-            employee.setSalary(employee.getSalary() * percent);
-            System.out.printf("После индексации зарплаты " + employee.getFullName() + " получает %.0f " + " рублей%n", employee.getSalary());
+            if (employee != null) {
+                employee.setSalary(employee.getSalary() + employee.getSalary() / 100 * percent);
+                System.out.printf("После индексации зарплаты " + employee.getFullName() + " получает %.0f " + " рублей%n", employee.getSalary());
+            }
         }
+    }
+
+    public static void findWorkerWithMinSalaryInDepartment(int number) {
+        double min = Integer.MAX_VALUE;
+        String minSalaryEmployee = null;
+        for (Employee employee : Main.BOOK_WORKERS) {
+            if (employee != null && employee.getDepartment() == number && employee.getSalary() < min) {
+                min = employee.getSalary();
+                minSalaryEmployee = employee.getFullName();
+            }
+        }
+        System.out.printf(minSalaryEmployee + " из " + number + "-го отдела зарабатывает %.0f "
+                + " рублей в месяц. Это минимальная ЗП в этом отделе%n", min);
     }
 }

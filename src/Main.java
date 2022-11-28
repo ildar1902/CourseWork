@@ -36,7 +36,12 @@ public class Main {
 //        Повышенная сложность
         System.out.println();
         System.out.println("    Задания повышенной сложности");
-        double percentIncreasingSalary = 1.06;
-        EmployeeOptions.indexSalary(percentIncreasingSalary);
+        double percentIncreasingSalary = 6; // задаваемая величина индексации (%)
+        EmployeeOptions.indexSalary(percentIncreasingSalary); //вызов метода, который индексирует ЗП
+        System.out.println();
+        int numberDepartment = 4; //задаваемый номер отдела
+        EmployeeOptions.findWorkerWithMinSalaryInDepartment(numberDepartment); //вызов метода, который находит сотрудника по отделу с минимальной зп
+
+
     }
 }

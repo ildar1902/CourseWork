@@ -54,7 +54,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "id = " + getId() + ", ФИО: " + getSurname() + " " + getName() + " " + getPatronymic() +
-                ", отдел № " + getDepartment() + ", ЗП = " + getSalary();
+        return "ID = " + getId() + ", отдел № "  + ", ФИО: " + getSurname() +
+                 " " + getName() + " " + getPatronymic() + getDepartment() + ", ЗП = " + getSalary();
     }
 }
