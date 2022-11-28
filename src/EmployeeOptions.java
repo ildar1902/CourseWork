@@ -96,6 +96,7 @@ public class EmployeeOptions {
         System.out.printf(maxSalaryEmployee + " из " + number + "-го отдела зарабатывает %.0f "
                 + " рублей в месяц. Это максимальная ЗП в этом отделе%n", max);
     }
+
     public static double calculateCostAmountInDepartment(int number) {
         double sum = 0;
         for (Employee employee : Main.BOOK_WORKERS) {
@@ -105,13 +106,25 @@ public class EmployeeOptions {
         }
         return sum;
     }
+
     public static double calculateAverageSalaryInDepartment(int number) {
         int count = 0;
         for (Employee employee : Main.BOOK_WORKERS) {
-            if (employee != null && employee.department == number ) {
+            if (employee != null && employee.department == number) {
                 count++;
             }
         }
         return calculateCostAmountInDepartment(number) / count;
+    }
+
+    public static void indexSalaryInDepartment(int number, double percent) {
+
+        for (Employee employee : Main.BOOK_WORKERS) {
+            if (employee != null && employee.getDepartment() == number) {
+                employee.setSalary(employee.getSalary() + employee.getSalary() / 100 * percent);
+                System.out.printf("После индексации зарплаты в " + number + "-м отделе " + employee.getFullName() +
+                        " получает %.0f " + " рублей%n", employee.getSalary());
+            }
+        }
     }
 }

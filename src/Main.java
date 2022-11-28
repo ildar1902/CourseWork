@@ -50,6 +50,7 @@ public class Main {
         double averageSalaryInDepartment = EmployeeOptions.calculateAverageSalaryInDepartment(numberDepartment);//вызов метода, который находит среднюю зп в отделе
         System.out.println("Средняя ЗП в " + numberDepartment + "-м отеле равна " + averageSalaryInDepartment + " рублей");
         System.out.println();
-
+        EmployeeOptions.indexSalaryInDepartment(numberDepartment, percentIncreasingSalary); //вызов метода, который индексирует зп по отделу
+        System.out.println();
     }
 }
