@@ -1,11 +1,11 @@
 public class Employee {
-    String surname;
-    String name;
-    String patronymic;
-    int department;
-    double salary;
-    int id;
-    public static int idCounter; //статическая переменная счетчик, отвечающая за id
+    final private String surname;
+  final private String name;
+   final private String patronymic;
+  private int department;
+  private double salary;
+  final private int id;
+    private static int idCounter; //статическая переменная счетчик, отвечающая за id
 
     public Employee(String surname, String name, String patronymic, int department, double salary) {
         this.surname = surname;
@@ -48,9 +48,7 @@ public class Employee {
         return id;
     }
 
-    public void setDepartment(int department) {
-        this.department = department;
-    }
+    public void setDepartment(int department) { this.department = department; }
 
     public void setSalary(double salary) {
         this.salary = salary;
